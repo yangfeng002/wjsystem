@@ -4,8 +4,11 @@
 `1.技术支持`   
 vue  
 vue-cli  
+vue-router  
+axios/vue-axios    
 element-ui  
 nodeJs  
+webpack  
 mysql  
 
 `2.开发工具`  
@@ -50,7 +53,7 @@ npm install vue-router
    vue init webpack wjSys
    
    2.2 切换路径，安装依赖（install dependencies）
-       cd my-project
+       cd wjSys
        npm install
    
    2.3 部署运行（serve with hot reload at localhost:8080）
@@ -70,18 +73,29 @@ _ _ _
 ## 三、项目结构解析
 
 > wjSys  
->> build  //webpack相关配置文件（存放生产环境文件）  
->> config  //webpack相关配置文件  
->> node_modules  //（模块化,不提交）  
->> src   //开发环境文件
+>> build  //文件夹里是一些webpack的文件，配置参数什么的，一般不需要做修改（存放生产环境文件）  
+>> config  //文件里是vue项目的基本配置文件 ，通常也不要修改
+>> node_modules  //文件里是项目中安装的依赖模块（不提交） 
+>> src   //源码文件夹，你写的代码基本上都放在这里面
     * -- assets  //资源文件，容易发生变化的文件  
-    * -- components  //vue组件  
-    * -- router  //路由文件  
-    * -- App.vue  //公共组件  
+    * -- components  //vue组件    
+    * -- router  //路由文件    
+    * -- App.vue  //公共组件     
     * -- main.js  //入口文件  
->> static  //静态资源文件，不会打包到build中，很少改变的文件  
->> test  //测试  
->> index.html //默认首页文件
+>> static    //静态资源放在这个目录下，这个目录下的资源文件默认是不会被打包压缩的  
+>> test    //测试文件夹，测试都写在这里  
+>> index.html   //默认首页文件  
+>> .babelrc   //babel的配置参数，babel将ES6的语法进行编译  
+>> .editorconfig  //看名字和内容应该是编辑器的配置文件  
+>> .gitignore   //用来过滤一些版本控制的文件，比如node_modules/.idea等文件夹
+>> .eslintignore //过滤eslint语法的  
+>> index.html   //项目的主页  
+>> package.json //是这个项目的一个文档说明，非常重要，在使用npm 安装依赖项的时候就是根据这个文件来的  
+>> README.md  // 介绍自己这个项目的一个Markdown文件。  
+
+
+
+
 
 
 
